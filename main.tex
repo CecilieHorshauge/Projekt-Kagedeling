@@ -44,11 +44,25 @@ Reglerne for kagedeling er givet ved:
     \item Samuraimesteren tildeles ét af stykkerne
     \item Denne proces gentages et passende antal gange.
 \end{itemize}
-Rekursionsligningen \(\)
-
+\textbf{NB: Jeg antager at for hver gentagelse at samuraimesteren får et stykke kage.}\\
+Rekursionsligningen \(y_{n+1}=2 \cdot y_n -1\) må lige netop være en passende rekursionsligning. 
+Da antallet afhænger af antallet af stykker der var skåret lige inden \(y_n\) og ved \(y_{n+1}\) fordobles antallet af stykker ved at hvert kagestykke halveres. Der tages højde for samuraimesterens kagestykker ved at trække 1 fra.\\
+Udviklingen i antal kagestykker udover samuraimesterens kan derfor beskrives med rekursionsligningen
+\[y_{n+1}=2 \cdot y_n -1.\]
+\clearpage
 \section*{B:}
 \textit{Bestem ligningens fuldstændige løsning.}\\\\
-
+Rekursionsligningen er inhomogen. Først vil samtlige  løsninger bestemmes med udgangspunkt i sætning 3.\\
+Jeg antager først at \(z_n\) er en løsning rekursionsligningen
+\[y_{n+1}=2 \cdot y_n -1.\]
+Dernæst gætter jeg på at \(z_n=c\), altså at løsningen \(z_n\) er en konstant. Vi kan derfor lave denne manipulation af udtrykket og isolere for c.
+\begin{align*}
+    z_{n+1}=2 \cdot z_n -1\\
+    c=2 \cdot c -1\\
+    c=1
+\end{align*}
+Som følge af sætning 3 bliver den fuldstændige løsning
+\[y_{n}=1+k \cdot 2^n\] 
 \section*{C:}
 \textit{Bestem de partikulære løsninger med udgangspunkt i begyndelsesværdierne \(y_0=1\), \(y_0=2\), \(y_0=3\) samt \(y_0=s\).}\\\\
 
