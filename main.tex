@@ -13,6 +13,7 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{wrapfig}
+\usepackage{graphicx} %Billeder
 
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
@@ -123,4 +124,18 @@ Sådan har jeg brugt Newtons metode til at bestemme nulpunkt for \(\ln(x)\). Hvi
 \clearpage
 \section*{F:}
 \textit{Udvælg en differentialligning og vis, hvordan Eulers metode kan anvendes til at bestemme punkter på løsningskurven.}\\\\
+Jeg vælger differentialligningen \(y'=3+y\). Eulers metode fungerer på den måde at ved en given differentialligning \(\frac{dy}{dx}=g(y)\) med begyndelsesbetingelse \(y_0=s\) og med valg af afstand \(h>0\) mellem punkterne på den tilnærmede løsningskurve, kan et estimeret punkt bestemmes ud fra det forrige ved:
+\[y_{n+1}=y_n+h\cdot g(y_n)\]
+Her bliver \(x_0=1\), \(y_0=2\), \(h=0.5\) og \(g(y)=3+y\). Vi får da:\\
+\(y_1=y_0+h\cdot g(y_0)=4.5\)\\
+\(y_2=y_1+h\cdot g(y_1)=8.25\)\\
+\(y_3=y_2+h\cdot g(y_2)=13.875\)\\
+\(y_4=y_3+h\cdot g(y_3)=22.3125\)\\
+Nedenfor ses et plot af de estimerede punkter sammen med den sande løsningskurve.
+\begin{center}
+    \includegraphics[width=0.6 \textwidth]{figur1.png}
+\end{center}
+Jo længere væk fra begyndelsesværdien vi kommer jo dårligere bliver punkterne estimeret. 
+Hvis jeg derimod havde valgt \(h=0.1\) ville punkterne ligge noget tættere på den sande løsningskurve, men det ville samtidigt resultere i flere beregninger.
+
 \end{document}
