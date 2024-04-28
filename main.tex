@@ -57,21 +57,70 @@ Jeg antager først at \(z_n\) er en løsning rekursionsligningen
 \[y_{n+1}=2 \cdot y_n -1.\]
 Dernæst gætter jeg på at \(z_n=c\), altså at løsningen \(z_n\) er en konstant. Vi kan derfor lave denne manipulation af udtrykket og isolere for c.
 \begin{align*}
-    z_{n+1}=2 \cdot z_n -1\\
-    c=2 \cdot c -1\\
-    c=1
+    z_{n+1}&=2 \cdot z_n -1\\
+    c&=2 \cdot c -1\\
+    c&=1
 \end{align*}
 Som følge af sætning 3 bliver den fuldstændige løsning
 \[y_{n}=1+k \cdot 2^n\] 
+\clearpage
 \section*{C:}
 \textit{Bestem de partikulære løsninger med udgangspunkt i begyndelsesværdierne \(y_0=1\), \(y_0=2\), \(y_0=3\) samt \(y_0=s\).}\\\\
-
+\underline{\(y_0=1\)}\\
+Da \(n=0\) og \(y_0=1\) indsætter jeg i den fuldstændige løsning og isolerer for \(k\) og på den måde bestemmer den partikulære løsning med begyndelsesværdien \(y_0=1\).
+\begin{align*}
+    y_{0}&=1+k \cdot 2^0\\
+    1&=1+k \cdot 1\\
+    k&=0
+\end{align*}
+og dermed bliver den partikulære løsning \(y_n=1+0\cdot 2^n\) altså blot \(y_n=1\).\\\\
+\underline{\(y_0=2\)}\\
+Samme metode benyttes.
+\begin{align*}
+    y_{0}&=1+k \cdot 2^0\\
+    2&=1+k \cdot 1\\
+    k&=1
+\end{align*}
+Den partikulære løsning bliver da \(y_n=1+2^n\).\\\\
+\underline{\(y_0=3\)}\\
+Samme metode benyttes.
+\begin{align*}
+    y_{0}&=1+k \cdot 2^0\\
+    3&=1+k\cdot 1\\
+    k&=2
+\end{align*}
+Den partikulære løsning bliver da \(y_n=1+2 \cdot 2^n\).\\\\
+\underline{\(y_0=s\)}\\
+Samme metode benyttes.
+\begin{align*}
+    y_{0}&=1+k \cdot 2^0\\
+    s&=1+k\cdot 1\\
+    k&=s-1
+\end{align*}
+Den partikulære løsning bliver da \(y_n=1+(s-1) \cdot 2^n\).
+\clearpage
 \section*{D:}
 \textit{Opstil talrækkerne ud fra de partikulære løsninger med begyndelsesværdierne i sp. C og sammenlign svaret med rekursionsligningen fra sp. A.}\\\\
-
+Jeg udregner hver af talrækkerne ved brug af de partikulære løsninger. Man indsætter blot det \(n\) man ønsker at beregne for.
+Talrækkerne bliver som følger:\\
+\(y_0=1,\; y_1=1\; y_2=1,\; y_3=1 \dots\)\\
+\(y_0=2,\; y_1=3\; y_2=5,\; y_3=9 \dots\)\\
+\(y_0=3,\; y_1=5\; y_2=9,\; y_3=17 \dots\)\\
+\(y_0=s,\; y_1=2s-1\; y_2=4s-3,\; y_3=8s-7 \dots\)\\\\
+De stemmer alle overens med rekursionsligningen \(y_{n+1}=2y_n-1\)
 \section*{E:}
 \textit{Udvælg en funktionsforskrift og vis hvordan Newtons metode kan anvendes til at bestemme nulpunkt/nulpunkter.}\\\\
-
+Jeg vælger \(\ln(x)\) og bruger newtons metode til at bestemme nulpunkt for funktionen.
+Man tilnærmer sig værdien ved rekursivt at løse ligningen \(0=f'(x_0)(x-x_0)+f(x_0)\). Den næste tilnærmede værdi \(x_{n+1}=N(x_n)\) findes ved
+\[N(x)=x-\frac{f(x)}{f'(x)}\]
+Jeg vælger mit gæt til at være 2. Dvs. \(x_0=2\) og jeg indsætter i \(N(x)\) jeg får da.\\
+\(\displaystyle x_1=x_0-\frac{f(x_0)}{f'(x_0)} = 2- \frac{\ln(2)}{\frac{1}{2}}=2-2\cdot \ln(2)= \textcolor{blue}{0.613705639}\)\\\\\\
+\(\displaystyle x_2=x_1-\frac{f(x_1)}{f'(x_1)} = 0.613705639- \frac{\ln(0.613705639)}{\frac{1}{0.613705639}}= \textcolor{blue}{0.9133412073}\)\\\\\\
+\(\displaystyle x_3=x_2-\frac{f(x_2)}{f'(x_2)} = 0.9133412073- \frac{\ln(0.9133412073)}{\frac{1}{0.9133412073}}= \textcolor{blue}{0.9961317034}\)\\\\\\
+\(\displaystyle x_4=x_3-\frac{f(x_3)}{f'(x_3)} = 0.9961317034- \frac{\ln(0.9961317034)}{\frac{1}{0.9961317034}}= \textcolor{blue}{0.9999925085}\)\\\\\\
+\(\displaystyle x_5=x_4-\frac{f(x_4)}{f'(x_4)} = 0.9999925085- \frac{\ln(0.9999925085)}{\frac{1}{0.9999925085}}= \textcolor{blue}{1.0000000000}\)\\\\\\
+Sådan har jeg brugt Newtons metode til at bestemme nulpunkt for \(\ln(x)\). Hvis jeg havde valgt et begyndelsesgæt ret meget over 2.6 ville \(x_1\) ligge uden for \(\ln\)'s definitionsmængde og det ville ikke give mening. Nulpunktet blev bestemt til \(x=1\) som forventet.
+\clearpage
 \section*{F:}
 \textit{Udvælg en differentialligning og vis, hvordan Eulers metode kan anvendes til at bestemme punkter på løsningskurven.}\\\\
 \end{document}
